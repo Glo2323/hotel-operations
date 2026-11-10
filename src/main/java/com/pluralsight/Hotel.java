@@ -30,23 +30,30 @@ public class Hotel {
     public boolean bookRoom(int roomCount, boolean suit){
         Scanner scanner =new Scanner(System.in);
 
+        boolean isBooked = false;
+
         //? if statement to see if they want a suit
-        if (suit){
+        if (suit) {
             bookedSuits += roomCount;
             //*Checking if they are any rooms available
-            if (getAvailableSuits() > 0 && roomCount > 0)
+            if (getAvailableSuits() > 0 && roomCount > 0) {
+
                 System.out.println("Room is booked ");
+
+                isBooked = true;
+            }
             else {
                 System.out.println("No rooms Available");
                 bookedSuits -= roomCount;
             }
-
-
-        }else {
+        }
+        else {
             System.out.println("How can I Help then");
         }
-        return suit = true;
+        return isBooked;
     }
+
+
 
     //?Derived getters that get their info from other info
     public int getAvailableRooms(){
