@@ -34,7 +34,7 @@ public class Hotel {
         if (suit){
             bookedSuits += roomCount;
             //*Checking if they are any rooms available
-            if (getAvailableSuits() > 0)
+            if (getAvailableSuits() > 0 && roomCount > 0)
                 System.out.println("Room is booked ");
             else {
                 System.out.println("No rooms Available");

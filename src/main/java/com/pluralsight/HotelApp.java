@@ -62,7 +62,7 @@ public class HotelApp {
         System.out.println( "How many rooms are available: " + all.getAvailableRooms() + "\n");
         System.out.println("How many Suits are available: " + all.getAvailableSuits() + "\n");
 
-        all.bookRoom(6,false);
+        all.bookRoom(-6,true);
 
         System.out.println( "How many rooms are available: " + all.getAvailableRooms() + "\n");
         System.out.println("How many Suits are available: " + all.getAvailableSuits() + "\n");
