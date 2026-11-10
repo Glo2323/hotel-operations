@@ -37,12 +37,22 @@ public class HotelApp {
 
 
         //?Overloaded Punch in and Punch Out
-        demo.punchIn();
-        demo.punchOut();
+//        demo.punchIn();
+//        demo.punchOut();
+//
+//
+//
+//
+//        System.out.println(demo.punchTimeCard());
 
 
 
+        Hotel roomsAndSuits = new Hotel("Manga Art Hotel",5,5);
 
-        System.out.println(demo.punchTimeCard());
+        Hotel all = new Hotel("Manga Air Hotel", 5, 5, 2, 3);
+
+        System.out.println( "How many rooms are available: " + all.getAvailableRooms());
+        System.out.println("How many Suits are available: " + all.getAvailableSuits());
+
     }
 }
