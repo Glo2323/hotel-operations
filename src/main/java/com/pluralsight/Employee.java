@@ -2,7 +2,6 @@ package com.pluralsight;
 
 import java.io.PrintStream;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.Scanner;
 
 public class Employee {
@@ -15,6 +14,7 @@ public class Employee {
     private int startTime;
     private int endtime;
 
+    //!Creating my object
     public Employee(String name, String department, double payRate, double hoursWorked, int startTime, int endtime) {
         this.name = name;
         this.department = department;
@@ -24,6 +24,7 @@ public class Employee {
         this.endtime = endtime;
     }
 
+    //?Creating getters and setters to get the info and set the info
     public int getEmployeeId() {
         return employeeId;
     }
@@ -60,6 +61,7 @@ public class Employee {
         return hoursWorked;
     }
 
+    //?Derived getters that get their info from other info
     public void setHoursWorked(double hoursWorked) {
         this.hoursWorked = hoursWorked;
     }
@@ -74,6 +76,7 @@ public class Employee {
     public void setTotalPay(double totalPay) {
     }
 
+    //?Derived getters that get their info from other info
     public double getRegularHours(){
         double regularHours = 0;
         if (hoursWorked <= 40) {
@@ -84,6 +87,7 @@ public class Employee {
         return  regularHours;
     }
 
+    //?Derived getters that get their info from other info
     public double  getOvertimeHours() {
 
         double overtimeHours = 0;
@@ -100,6 +104,7 @@ public class Employee {
 
     }
 
+    //?Derived getters that get their info from other info
     public void punchIn(){
 
         Scanner scanner = new Scanner(System.in);
@@ -114,6 +119,7 @@ public class Employee {
 
     }
 
+    //?Derived getters that get their info from other info
     public void punchOut(){
 
         Scanner scanner = new Scanner(System.in);
@@ -129,12 +135,14 @@ public class Employee {
 
     }
 
+    //?Derived getters that get their info from other info
     public  double punchOut(int time){
         hoursWorked = time - startTime;
         return time ;
 
     }
 
+    //?Derived getters that get their info from other info
     public PrintStream punchTimeCard(){
         int punchInTime = getStartTime();
 
@@ -147,7 +155,7 @@ public class Employee {
 
     }
 
-
+    //?Creating getters and setters to get the info and set the info
     public int getStartTime() {
         return startTime;
     }

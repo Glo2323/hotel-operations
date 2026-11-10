@@ -50,7 +50,7 @@ public class Reservation {
     public void setNumberOfNights(int numberOfNights) {
         this.numberOfNights = numberOfNights;
     }
-
+    //?Derived getters that get their info from other info
     public boolean isWeekend() {
         LocalDate date =  LocalDate.now();
 
@@ -61,6 +61,7 @@ public class Reservation {
     public void setWeekend(boolean weekend) {
     }
 
+    //?Derived getters that get their info from other info
     public double getReservationTotal() {
 
         return  price * numberOfNights;

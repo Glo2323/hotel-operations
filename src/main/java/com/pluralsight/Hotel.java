@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.util.Scanner;
+
 public class Hotel {
 
     private String name;
@@ -8,6 +10,7 @@ public class Hotel {
     private int bookedSuits;
     private int bookedRooms;
 
+    //!Creating my objects
     public Hotel(String name, int numberOfSuits, int numberOfRooms) {
         this.name = name;
         this.numberOfSuits = numberOfSuits;
@@ -23,14 +26,29 @@ public class Hotel {
     }
 
 
+    //!Creating a method that allows guest to book a room
     public boolean bookRoom(int roomCount, boolean suit){
+        Scanner scanner =new Scanner(System.in);
+
+        //? if statement to see if they want a suit
+        if (suit){
+            bookedSuits += roomCount;
+            //*Checking if they are any rooms available
+            if (getAvailableSuits() > 0)
+                System.out.println("Room is booked ");
+            else {
+                System.out.println("No rooms Available");
+                bookedSuits -= roomCount;
+            }
 
 
-
-        return false;
+        }else {
+            System.out.println("How can I Help then");
+        }
+        return suit = true;
     }
 
-
+    //?Derived getters that get their info from other info
     public int getAvailableRooms(){
         //?Figure out how many rooms are available by  working with booked rooms vs number of rooms
 
@@ -44,6 +62,7 @@ public class Hotel {
         return numberOfSuits - bookedSuits;
     }
 
+    //?Creating getters and setters to get the info and set the info
     public String getName() {
         return name;
     }

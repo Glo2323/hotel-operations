@@ -8,6 +8,7 @@ public class Room {
     private boolean dirty;
     private boolean available;
 
+    //!Creating my object
     public Room(int numberOfBeds, String roomType, boolean occupied, boolean dirty) {
         this.numberOfBeds = numberOfBeds;
         this.roomType = roomType;
@@ -20,6 +21,7 @@ public class Room {
         return numberOfBeds;
     }
 
+    //?Derived getters that get their info from other info
     public double getPrice() {
         double price = 0;
 
