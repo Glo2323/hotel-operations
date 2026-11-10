@@ -8,13 +8,11 @@ public class Reservation {
     private String roomType;
     private double price;
     private int numberOfNights;
-    private double reservationTotal;
 
-    public Reservation(String roomType, double price, int numberOfNights, double reservationTotal) {
+
+    public Reservation(String roomType, int numberOfNights) {
         this.roomType = roomType;
-        this.price = price;
         this.numberOfNights = numberOfNights;
-        this.reservationTotal = reservationTotal;
     }
 
     public String getRoomType() {
@@ -67,7 +65,4 @@ public class Reservation {
         return  price * numberOfNights;
     }
 
-    public void setReservationTotal(double reservationTotal) {
-        this.reservationTotal = reservationTotal;
-    }
 }
