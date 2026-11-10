@@ -24,16 +24,22 @@ public class HotelApp {
 //        System.out.printf("PunchIn: %.02f\nPunchOut: %.02f\nHoursWorked: %.02f"
 //                ,demo.punchIn(8), demo.punchOut(15),demo.getHoursWorked());
 
-        System.out.println("What's your punch in time: ");
-        int  startTime = scanner.nextInt();
-           demo.setStartTime(startTime);
+//        System.out.println("What's your punch in time: ");
+//        int  startTime = scanner.nextInt();
+//          demo.setStartTime(startTime);
+//
+//
+//
+//
+//        System.out.println("What's your Punch out time");
+//         int endTime = scanner.nextInt();
+//         demo.setEndtime(endTime);
 
 
+        //?Overloaded Punch in and Punch Out
+        demo.punchIn();
+        demo.punchOut();
 
-
-        System.out.println("What's your Punch out time");
-         int endTime = scanner.nextInt();
-         demo.setEndtime(endTime);
 
 
 

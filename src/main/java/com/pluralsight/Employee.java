@@ -1,6 +1,9 @@
 package com.pluralsight;
 
 import java.io.PrintStream;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.Scanner;
 
 public class Employee {
 
@@ -94,6 +97,35 @@ public class Employee {
     public double punchIn(int time){
 
         return this.startTime = time;
+
+    }
+
+    public void punchIn(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        int clockInHour = LocalDateTime.now().getHour();
+        int clockInMin = LocalDateTime.now().getMinute();
+
+        System.out.println("What's your punch in time: ");
+        this.startTime = scanner.nextInt();
+
+        System.out.printf("Hour; %d\nMinutes: %d\n", clockInHour, clockInMin );
+
+    }
+
+    public void punchOut(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        int clockOutHour = LocalDateTime.now().getHour();
+        int clockOutMin = LocalDateTime.now().getMinute();
+
+        System.out.println("What's your punch out time: ");
+        this.endtime = scanner.nextInt();
+
+        System.out.printf("Hour; %d\nMinutes: %d\n", clockOutHour, clockOutMin );
+
 
     }
 
