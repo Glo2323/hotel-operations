@@ -1,7 +1,7 @@
 package com.pluralsight;
 
 public class Guest {
-
+    //?Attributes to make my object
     private int guestID;
     private String firstName;
     private String lastName;
@@ -10,7 +10,7 @@ public class Guest {
     private String address;
     private boolean isDifficult;
 
-
+    //!Creating my object
     public Guest(String firstName, String lastName, String email, String phoneNumber, String address) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -18,7 +18,7 @@ public class Guest {
         this.phoneNumber = phoneNumber;
         this.address = address;
     }
-
+    //?Creating getters and setters to get the info and set the info
     public String getFirstName() {
         return firstName;
     }

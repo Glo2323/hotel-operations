@@ -5,6 +5,7 @@ import java.time.LocalDate;
 
 public class Reservation {
 
+    //?Attributes to make my object
     private String roomType;
     private double price;
     private int numberOfNights;
@@ -12,12 +13,14 @@ public class Reservation {
     private  Room room;
 
 
+    //!Creating my object
     public Reservation(int numberOfNights, boolean weekend  ,Room room) {
         this.weekend = weekend;
         this.numberOfNights = numberOfNights;
         this.room = room;
     }
 
+    //?Creating getters and setters to get the info and set the info
     public String getRoomType() {
         return roomType;
     }
@@ -25,7 +28,7 @@ public class Reservation {
     public void setRoomType(String roomType) {
         this.roomType = roomType;
     }
-
+    //?Derived getters that get their info from other info
     public double getPrice() {
       price =+ room.getPrice();
 

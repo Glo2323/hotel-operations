@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-import java.time.LocalTime;
+import java.io.PrintStream;
 
 public class Employee {
 
@@ -10,12 +10,15 @@ public class Employee {
     private double payRate;
     private double hoursWorked;
     private int startTime;
+    private int endtime;
 
-    public Employee(String name, String department, double payRate, double hoursWorked) {
+    public Employee(String name, String department, double payRate, double hoursWorked, int startTime, int endtime) {
         this.name = name;
         this.department = department;
         this.payRate = payRate;
         this.hoursWorked = hoursWorked;
+        this.startTime = startTime;
+        this.endtime = endtime;
     }
 
     public int getEmployeeId() {
@@ -100,15 +103,32 @@ public class Employee {
 
     }
 
-    public void punchTimeCard(){
+    public PrintStream punchTimeCard(){
+        int punchInTime = getStartTime();
 
+        int punchOutTime = getEndtime();
+
+        hoursWorked = punchOutTime - punchInTime;
+
+        return System.out.printf("Hours Worked: %.2f\nPunchIn time: %d\nPunchout time: %d ", hoursWorked, punchInTime, punchOutTime );
 
 
     }
 
 
+    public int getStartTime() {
+        return startTime;
+    }
 
+    public int getEndtime() {
+        return endtime;
+    }
 
+    public void setStartTime(int startTime) {
+        this.startTime = startTime;
+    }
 
-
+    public void setEndtime(int endtime) {
+        this.endtime = endtime;
+    }
 }
