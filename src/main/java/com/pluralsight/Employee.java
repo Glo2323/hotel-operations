@@ -62,12 +62,25 @@ public class Employee {
     public void setTotalPay(double totalPay) {
     }
 
-    public boolean getOvertimeHours() {
-
-
-        return  hoursWorked > 40 ;
+    public double getRegularHours(){
+        double regularHours = 0;
+        if (hoursWorked <= 40) {
+            regularHours = hoursWorked;
+        }else if (hoursWorked > 40){
+            regularHours = 40;
+        }
+        return  regularHours;
     }
 
-    public void setOvertimeHours(boolean overtimeHours) {
+    public double  getOvertimeHours() {
+
+        double overtimeHours = 0;
+        if (hoursWorked > 40){
+            overtimeHours = hoursWorked - 40;
+        }
+
+        return overtimeHours;
     }
+
+
 }

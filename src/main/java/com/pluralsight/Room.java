@@ -8,6 +8,13 @@ public class Room {
     private boolean dirty;
     private boolean available;
 
+    public Room(int numberOfBeds, String roomType, boolean occupied, boolean dirty) {
+        this.numberOfBeds = numberOfBeds;
+        this.roomType = roomType;
+        this.occupied = occupied;
+        this.dirty = dirty;
+
+    }
 
     public int getNumberOfBeds() {
         return numberOfBeds;
@@ -35,5 +42,21 @@ public class Room {
 
     public boolean isAvailable() {
         return !dirty && !occupied;
+    }
+
+    public void checkIn(){
+        occupied = true;
+        dirty = true;
+    }
+
+    public void checkOut(){
+       cleanRoom();
+
+       occupied = false;
+
+    }
+
+    public void cleanRoom(){
+        dirty = false;
     }
 }
