@@ -45,8 +45,10 @@ public class Room {
     }
 
     public void checkIn(){
-        occupied = true;
-        dirty = true;
+       if (isAvailable()) {
+           occupied = true;
+           dirty = true;
+       }
     }
 
     public void checkOut(){

@@ -13,6 +13,12 @@ public class HotelApp {
         System.out.println("Is the room occupied: " + room.isOccupied());
         System.out.println("Is the room dirty: " + room.isDirty());
 
+        Employee demo = new Employee("Danna Partee", "Office Manager", 50, 0);
+
+
+        System.out.printf("PunchIn: %.02f\nPunchOut: %.02f\nHoursWorked: %.02f"
+                ,demo.punchIn(8), demo.punchOut(15),demo.getHoursWorked());
+
     }
 
 }
