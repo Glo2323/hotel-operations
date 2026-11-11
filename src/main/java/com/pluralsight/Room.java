@@ -54,10 +54,9 @@ public class Room {
     }
 
     public void checkOut(){
-       cleanRoom();
+        occupied = false;
 
-       occupied = false;
-
+        cleanRoom();
     }
 
     public void cleanRoom(){

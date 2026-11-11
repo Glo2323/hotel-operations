@@ -138,7 +138,7 @@ public class Employee {
     //?Derived getters that get their info from other info
     public  double punchOut(int time){
         hoursWorked = time - startTime;
-        return time ;
+        return this.endtime = time ;
 
     }
 
