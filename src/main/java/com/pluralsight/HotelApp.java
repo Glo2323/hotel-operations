@@ -12,13 +12,15 @@ public class HotelApp {
         Guest Messie = new Guest("Messie", "Rutayomba", "Idon'tlikethis@gmail.com", "214-333-5656", "123 mad lane");
 
         //?Creating my Room
-        Room room = new Room(2, "King", false, false);
+        Room room = new Room(2, "King", true, true);
 
         //*Testing my room
-        System.out.println("Room price is: " + room.getPrice());
-        room.checkIn();
-        room.checkOut();
-        System.out.println("Is the room available: " + room.isAvailable());
+//        System.out.println("Room price is: " + room.getPrice());
+//        System.out.println("Is the room available: " + room.isAvailable());
+        System.out.println("Is the room occupied: " + room.isOccupied());
+        System.out.println("Is the room dirty: " + room.isDirty());
+        room.cleanRoom();
+//        System.out.println("Is the room available: " + room.isAvailable());
         System.out.println("Is the room occupied: " + room.isOccupied());
         System.out.println("Is the room dirty: " + room.isDirty());
 
